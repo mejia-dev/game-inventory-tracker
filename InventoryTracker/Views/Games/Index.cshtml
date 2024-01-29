@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@using InventoryTracker.Models;
+
+<h1>Games</h1>
+
+@if (@Model.Count == 0)
+{
+  <p>Please add an item</p>
+}
+
+@foreach (Game game in Model)
+{
+  <li>
+    <div>
+      @game.GameName
+      @game.GameDescription
+    </div>
+  </li>
+}
+
+<p>@Html.ActionLink("Add new item", "Create")</p>

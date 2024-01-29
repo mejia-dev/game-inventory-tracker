@@ -1,0 +1,19 @@
+@{
+    Layout = "_Layout";
+}
+
+@model InventoryTracker.Models.Game
+
+<h4>Add a new game</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.GameName)
+    <br />
+    @Html.TextBoxFor(model => model.GameName)
+    <br /><br />
+    @Html.LabelFor(model => model.GameDescription)
+    <br />
+    @Html.TextBoxFor(model => model.GameDescription)
+    <br /><br />
+    <input type="submit" value="Add new Game" />
+}
