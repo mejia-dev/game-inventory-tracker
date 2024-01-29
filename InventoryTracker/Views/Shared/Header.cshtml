@@ -1,0 +1,21 @@
+<div id="headerDiv">
+  <h2>Welcome to Game Inventory Tracker!</h2>
+  @using (Html.BeginForm("Index", "Games", FormMethod.Get, new {gameName = "submitForm"}))
+{
+    @* @Html.Label() *@
+    <input type="text" name="searchQuery" />
+    <input type="submit" value="Search" />
+}
+</div>
+
+
+
+
+
+@* @using (Html.BeginForm("Index", "Games", FormMethod.Get))
+{
+  <p>
+    @Html.TextBox("searchQuery")
+    <input type="submit" value="Search">
+  </p>
+} *@

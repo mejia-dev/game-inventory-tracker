@@ -8,12 +8,22 @@
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.GameName)
+    <span class="required-field-style-red">*</span>
     <br />
-    @Html.TextBoxFor(model => model.GameName)
+    @Html.TextBoxFor(model => model.GameName, new {@required = "required"})
     <br /><br />
     @Html.LabelFor(model => model.GameDescription)
     <br />
     @Html.TextBoxFor(model => model.GameDescription)
     <br /><br />
     <input type="submit" value="Add new Game" />
+}
+
+<br />
+@* <a href='@Html.ActionLink("Back to Game List", "Index")'><button></button></a> *@
+
+
+@using (Html.BeginForm("Index", "Games", FormMethod.Get, new {id = "backButton"}))
+{
+    <input type="submit" value ="Back to Game List" />
 }

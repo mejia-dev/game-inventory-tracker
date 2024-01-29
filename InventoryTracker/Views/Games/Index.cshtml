@@ -11,14 +11,13 @@
   <p>Please add an item</p>
 }
 
+<ul>
 @foreach (Game game in Model)
 {
   <li>
-    <div>
-      @game.GameName
-      @game.GameDescription
-    </div>
+      @Html.ActionLink($"{game.GameName}", "Details", new{ id = game.GameId })
   </li>
 }
+</ul>
 
 <p>@Html.ActionLink("Add new item", "Create")</p>

@@ -1,0 +1,10 @@
+@{
+    Layout="_Layout";
+}
+
+@model InventoryTracker.Models.Game
+
+<h2>Game Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.GameDescription): @Html.DisplayFor(model => model.GameDescription)</h3>
+<p>@Html.ActionLink("Back to list", "Index")</p>
