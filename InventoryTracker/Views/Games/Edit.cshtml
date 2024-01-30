@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model InventoryTracker.Models.Game
+
+<h2>Edit</h2>
+
+<h4>Edit this game: @Html.DisplayFor(model => model.GameDescription)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.GameId)
+
+    @Html.LabelFor(model => model.GameDescription)
+    @Html.EditorFor(model => model.GameDescription)
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

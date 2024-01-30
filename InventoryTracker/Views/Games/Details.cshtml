@@ -7,4 +7,6 @@
 <h2>Game Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.GameDescription): @Html.DisplayFor(model => model.GameDescription)</h3>
+<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.GameId })</p>
+<p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.GameId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>

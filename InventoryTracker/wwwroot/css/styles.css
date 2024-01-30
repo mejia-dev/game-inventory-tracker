@@ -17,3 +17,8 @@ div#footer {
 .required-field-style-red {
 	color: red;
 }
+
+#deleteGameButton {
+	background-color: red;
+	color:#CCC;
+}
