@@ -1,8 +1,12 @@
 <div id="headerDiv">
   <h2>Welcome to Game Inventory Tracker!</h2>
-  @using (Html.BeginForm("Index", "Games", FormMethod.Get, new {gameName = "submitForm"}))
+
+@using (Html.BeginForm("Index", "Games", FormMethod.Get))
 {
-    @* @Html.Label() *@
+    <input type="radio" id="Name" name="propertyName" value="GameName" checked>
+    <label for="Name">Game name</label>
+    <input type="radio" id="Description" name="propertyName" value="GameDescription">
+    <label for="Description">Game description</label>
     <input type="text" name="searchQuery" />
     <input type="submit" value="Search" />
 }
